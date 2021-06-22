@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1 class="text-center mt-5">Nombre de Sms envoyé</h1>
+<h5 class="text-center mt-5">{{ result }}</h5>
+
+<div class="ml-3">
+    <a type="submit" class="btn btn-danger offset-2" href="{{ path('call_tickets') }}">Retour</a>
+</div>
+{% endblock %}

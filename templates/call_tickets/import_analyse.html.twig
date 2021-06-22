@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Importation des tickets et analyse{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center mt-5">Importation du ficher d'appel et analyse</h1>
+    <div>
+        {{ form_start(form, { 'method' : 'post', 'enctype' : 'enctype="multipart/form-data"'}) }}
+        <div class="offset-2 col-4 mt-5">
+            {{ form_row(form.import) }}
+        </div>
+    </div>
+    <div class="ml-3">
+        <button type="submit" class="btn btn-success offset-2" href="{{ path('call_tickets') }}">Importation</button>
+    </div>
+    {{ form_end(form) }}
+    <div class="ml-3 mt-3">
+        <a type="submit" class="btn btn-danger offset-2" href="{{ path('drop_database') }}">Suppression</a>
+    </div>
+    <div class="ml-3 mt-3">
+        <a type="submit" class="btn btn-info offset-2" href="{{ path('result_sms') }}">Resultat Sms</a>
+    </div>
+    <div class="ml-3 mt-3">
+        <a type="submit" class="btn btn-warning offset-2" href="{{ path('result_calls') }}">Resultat durée appel</a>
+    </div>
+{% endblock %}
