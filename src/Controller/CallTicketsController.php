@@ -136,7 +136,6 @@ class CallTicketsController extends AbstractController
             $result = $start->diff($date);
         }
 
-        dump($result);
         return $this->render('call_tickets/call_duration.html.twig', [
 //            'result' => $result;
         ]);
